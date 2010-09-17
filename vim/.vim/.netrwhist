@@ -1,0 +1,8 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='/usr/local/viewvc-1.1.3/templates-contrib/starleaf/templates/include'
+let g:netrw_dirhist_2='/usr/local/viewvc-1.1.3/templates-contrib/starleaf/templates'
+let g:netrw_dirhist_3='/usr/local/viewvc-1.1.3'
+let g:netrw_dirhist_4='/usr/local/viewvc-1.1.3/lib'
+let g:netrw_dirhist_5='/scratch/src/dev/videomonitor/cpu'
+let g:netrw_dirhist_6='/scratch/src/dev/base/debug'
