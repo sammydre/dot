@@ -1,5 +1,8 @@
-set nocompatible
+syntax on
+color desert
+filetype plugin indent on
 
+set nocompatible
 set hlsearch
 set incsearch
 set mouse=a
@@ -15,9 +18,18 @@ set sts=2
 
 set makeprg=scons\ -Qu
 
-syntax on
-color desert
-filetype plugin indent on
+set tags+=~/.vim/systags
+set tags+=tags
 
 let pascal_gpc=1
 
+if !has("gui_running")
+  if $COLORTERM == "gnome-terminal"
+    set t_Co=256
+    color desert256
+  else
+    " Would be nice to find a better colour scheme here, but at least it is
+    " decently readable.
+    color elflord
+  endif
+endif
