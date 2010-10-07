@@ -86,6 +86,10 @@ set cpo&vim
     let g:SuperTabMidWordCompletion = 1
   endif
 
+  if !exists("g:SuperTabCompletionAfterWhiteSpace")
+    let g:SuperTabCompletionAfterWhiteSpace = 1
+  endif
+
   if !exists("g:SuperTabMappingForward")
     let g:SuperTabMappingForward = '<tab>'
   endif
@@ -429,6 +433,12 @@ function! s:WillComplete()
   " Within a word, but user does not have mid word completion enabled.
   let next_char = strpart(line, cnum - 1, 1)
   if !g:SuperTabMidWordCompletion && next_char =~ '\k'
+    return 0
+  endif
+
+  " Don't complete after a whitespace char
+  if !g:SuperTabCompletionAfterWhiteSpace && cnum > 2 &&
+        \ strpart(line, cnum - 2, 1) =~ '\s'
     return 0
   endif
 

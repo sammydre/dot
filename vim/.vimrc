@@ -33,3 +33,8 @@ if !has("gui_running")
     color elflord
   endif
 endif
+
+" Completion of tags and buffers, but don't scan included files.
+set complete=.,w,b,u,t
+
+let g:SuperTabCompletionAfterWhiteSpace = 0
