@@ -11,6 +11,7 @@ set ignorecase
 set smartcase
 set number
 set modeline
+set bs=2
 
 set expandtab
 set shiftwidth=2
@@ -38,3 +39,4 @@ endif
 set complete=.,w,b,u,t
 
 let g:SuperTabCompletionAfterWhiteSpace = 0
+let g:SuperTabMidWordCompletion = 0
